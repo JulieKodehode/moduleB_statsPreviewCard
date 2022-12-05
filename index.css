@@ -1,0 +1,191 @@
+/* Google font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+/* font-family: "Inter", sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+/* font-family: "Lexend Deca", sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;400&display=swap");
+
+/* General */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-color: hsl(233, 47%, 7%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Card - parent, child */
+.card {
+  margin: 0;
+  padding: 0;
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 10px;
+  position: relative;
+}
+
+/* About - grandchild */
+.about {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+
+span {
+  color: hsl(277, 64%, 61%);
+}
+
+/* Info & List - greatgrandchildren */
+.info h1 {
+  padding: 0 40px;
+}
+
+.info p {
+  padding: 0 40px;
+  width: 40ch;
+  line-height: 1.5;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding: 0 40px;
+}
+
+ul {
+  display: inline;
+  list-style-type: none;
+  padding: 0 40px 0 0;
+}
+
+li {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Font for list */
+.fontChange {
+  font-family: "Lexend Deca", sans-serif;
+  color: hsla(0, 0%, 100%, 0.6);
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 2;
+}
+
+/* Images - greatgrandchildren */
+.images {
+  flex-basis: 50%;
+  background-color: hsl(244, 38%, 16%);
+}
+
+.img1 {
+  display: flex;
+  width: 450px; /* Half card width */
+  border-radius: 0 10px 10px 0;
+}
+
+.img2 {
+  display: none;
+}
+
+.img-purple {
+  position: relative;
+  background-color: hsl(244, 38%, 16%);
+  opacity: 0.5;
+}
+
+.img-purple::after {
+  position: absolute;
+  content: "";
+  width: 450px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: hsl(277, 64%, 61%);
+  opacity: 0.5;
+  border-radius: 0 10px 10px 0;
+}
+/* Cant make the purple match - but I managed to place it in */
+
+/* Mobile */
+@media (max-width: 374px) {
+  body {
+    text-align: center;
+    height: 100%;
+  }
+
+  .card {
+    max-width: 374px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  .about {
+    order: 2;
+  }
+
+  .info h1 {
+    padding: 0 30px;
+  }
+
+  .info p {
+    padding: 0 40px;
+    width: 29ch;
+    line-height: 1.5;
+  }
+
+  .list {
+    flex-direction: column;
+    display: flex;
+  }
+
+  ul {
+    padding: 12px;
+    margin: 0;
+  }
+
+  .photo {
+    order: 1;
+  }
+
+  .img1 {
+    display: none;
+  }
+
+  .img2 {
+    display: inline;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .img-purple {
+    position: relative;
+  }
+
+  .img-purple::after {
+    position: absolute;
+    width: 374px;
+    height: 275px;
+    border-radius: 10px 10px 0 0;
+  }
+}
